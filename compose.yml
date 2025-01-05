@@ -1,0 +1,12 @@
+version: '3'
+services:
+  angular-app:
+    container_name: 'acresinsight'
+    build: .
+    ports:
+      - "4200:4200"
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    command: sh -c "ng serve --host 0.0.0.0"

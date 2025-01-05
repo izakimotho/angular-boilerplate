@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "acrresinsight-boilerplate": {
+    "acresinsight-boilerplate": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,20 +13,30 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/acrresinsight-boilerplate",
+            "outputPath": "dist/acresinsight",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "tsconfig.app.json", 
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src",
+                "./node_modules"
+              ]
+            },
             "assets": [
               {
                 "glob": "**/*",
                 "input": "public"
-              }
-            ],
+              },
+              "src/favicon.ico",
+              "src/assets"
+            ], 
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -59,13 +69,18 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "acrresinsight-boilerplate:build:production"
+              "buildTarget": "acresinsight-boilerplate:build:production"
             },
             "development": {
-              "buildTarget": "acrresinsight-boilerplate:build:development"
+              "buildTarget": "acresinsight-boilerplate:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "sslKey": "./ssl/ca.key",
+            "sslCert": "./ssl/ca.crt",
+            "port": 4210
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n"
@@ -75,7 +90,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
@@ -87,7 +103,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/apexcharts/dist/apexcharts.min.js"]
           }
         }
       }
