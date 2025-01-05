@@ -1,6 +1,17 @@
 # AcrresinsightBoilerplate
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+<p align="center">
+     <img src="public/icons/icon-512x512.png" alt="angular" width="90">     
+</p>
+
+---
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3f3d0969-3549-4300-863d-06a1d6785cd0/deploy-status)](https://app.netlify.com/sites/angular-boiler-palte/deploys)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![commitizen](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)]()
+[![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
+
 
 ## Development server
 
@@ -11,6 +22,9 @@ ng serve
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## SSL
+
+In order to run either application locally using SSL, install the SSL certificate found in the ssl folder.  And then pass the ssl flag when starting the application.  For example, run `ng serve --ssl` or `ng serve --open --ssl` for a https dev server of the default application. Then navigate to `https://localhost:4210/`.
 
 ## Code scaffolding
 

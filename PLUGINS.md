@@ -19,32 +19,9 @@ npm install apexcharts ng-apexcharts --save
 npm i @ng-select/ng-select
 npm install simplebar-angular --save
 
-
-npm i metismenujs
-npm i @popperjs/core
-npm install ngx-perfect-scrollbar --save
-npm install ngx-cookie-service --save
-npm install jwt-decode
-npm i @protobuf-ts/runtime-angular
-npm i chart.js
-npm i ng2-charts //npm install ng2-charts --save
-npm i @angular/google-maps  /// ng add @angular/google-maps
  
 npm install -g npm@latest
 npm cache clean --force
 rm -rf node_modules package-lock.json
 npm install
 npm install --verbose
-
-
-
-
-
-    <!-- "@ng-bootstrap/ng-bootstrap": "^14.1.1",
-    "@popperjs/core": "^2.11.6",
-    "advert2-fe": "file:",
-    "bootstrap": "^5.2.3",
-    "bootstrap-icons": "^1.10.3",
-    "chart.js": "^4.2.1",
-    "ng-payment-card": "^0.0.8",
-    "ng2-charts": "^4.1.1", -->
