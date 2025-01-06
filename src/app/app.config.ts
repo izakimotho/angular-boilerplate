@@ -52,14 +52,11 @@ export const appConfig: ApplicationConfig = {
       withInterceptors([AuthenticationInterceptor, CachingInterceptor,loggingInterceptor]),
     ),
     // provideHttpClient is required for Angular's HttpClient with additional configuration, which includes interceptors from DI (dependency injection) , means to use class based interceptors
-    provideHttpClient(withFetch(),withInterceptorsFromDi()),
-    
+    provideHttpClient(withFetch(),withInterceptorsFromDi()),    
     {
       provide: RouteReuseStrategy,
       useClass: RouteReusableStrategy,
-    },
-    
-     
+    },     
   ],
 };
 

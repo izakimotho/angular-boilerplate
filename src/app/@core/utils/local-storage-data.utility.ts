@@ -1,4 +1,5 @@
-import { Credentials } from '@core/entities';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Credentials } from "../entities";
 
 /**
  * List of local storage keys
@@ -65,7 +66,7 @@ const getDataFromLocalStorage = (key: any) => {
   // }
   const data = localStorage.getItem(key);
   if (!data) window.location.href = '/logout';
-  return JSON.parse(data);
+  return data ? JSON.parse(data) : null;
 };
 
 const removeDataFromLocalStorage = (key: any) => {
