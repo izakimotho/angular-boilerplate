@@ -11,6 +11,9 @@ npm i http-status-codes npm i http-status-code
 npm uninstall @types/jasmine jasmine-core karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter
 <!-- install jest -->
 npm install -D jest jest-preset-angular @types/jest
+npm install --save-dev stylelint stylelint-config-standard-scss
+ng add @angular-eslint/schematics
+npm install prettier --save-dev
 
 npm install sweetalert2   npm install sweetalert2 @sweetalert2/ngx-sweetalert2
 npm install bootstrap@v5.3.3

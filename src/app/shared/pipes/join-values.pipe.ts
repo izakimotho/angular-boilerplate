@@ -14,7 +14,7 @@ import { Pipe, PipeTransform } from '@angular/core';
  *     <div>{{ [{ name: 'a' }, { name: 'b' }, { name: 'c' }] | joinValues: 'name': '-' }}</div> <!-- Output: 'a-b-c' -->
  */
 export class JoinValuesPipe implements PipeTransform {
-  transform(value: any[], propertyName?: string, separator = ', '): string {
+  transform(value: never[], propertyName?: string, separator = ', '): string {
     if (!value || value.length === 0) {
       return '';
     }

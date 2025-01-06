@@ -34,7 +34,8 @@ export class LetterWordCountDirective implements OnInit {
    * The target element to count the number of characters or words.
    * @type {HTMLElement}
    */
-  @Input() targetElement: HTMLElement;
+  @Input()
+  targetElement!: HTMLElement;
 
   /**
    * The maximum number of characters or words allowed in the target element.

@@ -33,7 +33,8 @@ export class NumberInputDirective implements OnInit {
   }
 
   @HostListener('input', ['$event'])
-  onInputChange(event: any) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  onInputChange(event: never) {
     const initialValue = this._el.nativeElement.value;
     this._el.nativeElement.value = initialValue.replace(/[^0-9 +()]/g, '').slice(0, this.maxLength);
 

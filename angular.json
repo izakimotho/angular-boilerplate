@@ -20,7 +20,7 @@
               "zone.js",
               "@angular/localize/init"
             ],
-            "tsConfig": "tsconfig.app.json", 
+            "tsConfig": "tsconfig.app.json",
             "stylePreprocessorOptions": {
               "includePaths": [
                 "src",
@@ -34,7 +34,7 @@
               },
               "src/favicon.ico",
               "src/assets"
-            ], 
+            ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
@@ -104,10 +104,25 @@
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/apexcharts/dist/apexcharts.min.js"]
+              "node_modules/apexcharts/dist/apexcharts.min.js"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "schematicCollections": [
+      "angular-eslint"
+    ]
   }
 }
